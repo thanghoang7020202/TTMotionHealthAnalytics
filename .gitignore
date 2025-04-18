@@ -1,0 +1,11 @@
+classifyData.xlsx
+**.csv
+**.xlsx
+
+**/*.csv
+**/*.xlsx
+**/*.xls
+
+# all files in the .venv directory
+.venv
+venv

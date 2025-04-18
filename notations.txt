@@ -1,0 +1,95 @@
+
+
+id : An unique ID to identify players
+,date : The data collected date
+,testmode: Three testing modes: swing in the air, full power stroke, and stable hitting, with values 0, 1, and 2 respectively
+,teststage : This value is only useful when testmode is 1. The values 1 to 3 represent three different ball speeds served by the serving machine
+,fileindex : The round that the player performs the swing
+,count : The count of swings in this round
+,ax_mean : mean acceleration in x-axis (unit: LSB/G)
+,ay_mean : mean acceleration in y-axis (unit: LSB/G)
+,az_mean : mean acceleration in z-axis (unit: LSB/G)
+,gx_mean : mean gyroscope in x-axis (unit: LSB/degree/s)
+,gy_mean : mean gyroscope in y-axis (unit: LSB/degree/s)
+,gz_mean : mean gyroscope in z-axis (unit: LSB/degree/s)
+,ax_var : variance of acceleration in x-axis (unit: the square of LSB/G)
+,ay_var : variance of acceleration in y-axis (unit: the square of LSB/G)
+,az_var : variance of acceleration in z-axis (unit: the square of LSB/G)
+,gx_var : variance of gyroscope in x-axis 
+,gy_var : variance of gyroscope in y-axis 
+,gz_var : variance of gyroscope in z-axis 
+,ax_rms : root mean square of acceleration in x-axis (unit: LSB/deg/s)
+,ay_rms : root mean square of acceleration in y-axis (unit: LSB/deg/s)
+,az_rms : root mean square of acceleration in z-axis
+,gx_rms : root mean square of gyroscope in x-axis
+,gy_rms : root mean square of gyroscope in y-axis
+,gz_rms : root mean square of gyroscope in z-axis
+,a_max : max acceleration
+,a_mean : mean acceleration
+,a_min : min acceleration
+,g_max : max gyroscope
+,g_mean : mean gyroscope
+,g_min : min gyroscope
+,a_fft : fast fourier transform of acceleration (revealing frequency components in signals, enabling noise reduction, facilitating signal decomposition, and enabling efficient data compression, making it a powerful tool in various applications)
+,g_fft : fast fourier transform of gyroscope
+,a_psdx : power spectral density of acceleration (unit: (LSB/G)^2/Hz) (revealing the distribution of power across different frequency components, providing insights into the signal's energy content and frequency characteristics, aiding in noise reduction, feature extraction, and signal analysis)
+,g_psdx : power spectral density of gyroscope (unit: (LSB/deg/s)^2/Hz)
+,a_kurt : kurtosis of acceleration (means how heavy-tailed the distribution is, indicating the presence of outliers or extreme values in the data)
+,g_kurt : kurtosis of gyroscope
+,a_skewn : skewness of acceleration (assesses the asymmetry of the distribution of values, providing insights into the data's shape and potential deviations from normality)
+,g_skewn : skewness of gyroscope
+,a_entropy : entropy of acceleration (reveals the complexity and unpredictability of the signal, indicating the amount of information or disorder present in the data)
+,g_entropy : entropy of gyroscope
+,gender : player gender (1 for males and 0 for females.)
+,age : The age of the player: high/medium/low
+,playYears : Number of years players have played ball games: high/medium/low
+,height : player height (high/medium/low)
+,weight : player weight (high/medium/low)
+,handedness : Player’s dominant hand: 1 for the right hand; 0 for the left hand
+,holdRacketHanded : The hand holds the racket: 1 for the right hand and 0 for the left hand
+,newv1 : description for newv1
+,newv2 : description for newv2
+,newv3 : description for newv3
+,newv4 : description for newv4
+
+! there are 2 types of features in the dataset:
+swing features:
+1) ax_mean, ay_mean, az_mean, gx_mean, gy_mean, gz_mean
+- ax_var, ay_var, az_var, gx_var, gy_var, gz_var
+- ax_rms, ay_rms, az_rms, gx_rms, gy_rms, gz_rms
+18 total
+
+2) a_max, a_mean, a_min, g_max, g_mean, g_min, 
+- a_skewn, g_skewn, a_kurt, g_kurt
+10 total
+
+3) from FFT:
+- a_fft, g_fft, a_psdx, g_psdx
+- a_entropy, g_entropy
+6 total
+
+personal features:
+- gender, age, height, weight, handedness, holdRacketHanded, playYears
+
+what had been done in arXiv:2306.17550v1:
+- gender prediction
+- age prediction
+- mode prediction (testmod swing in the air, ull power stroke, and stable hitting)
+- Racket-holding hand Prediction (holdRacketHanded) (right or left hand)
+- Experience in Years Prediction (playYears)
+
+new:
+- height classification:
+    + input xs:
+        - ax_mean, ay_mean, az_mean, gx_mean, gy_mean, gz_mean
+        - ax_var, ay_var, az_var, gx_var, gy_var, gz_var
+        - ax_rms, ay_rms, az_rms, gx_rms, gy_rms, gz_rms
+        - a_max, a_mean, a_min, g_max, g_mean, g_min
+        - a_skewn, g_skewn, a_kurt, g_kurt
+        - a_entropy, g_entropy
+    + output: different height classes (1:short, 2: medium, 3: tall)
+- height prediction (regression)
+- weight prediction
+(health care? or fitness?)
+-health of player over time?
+
