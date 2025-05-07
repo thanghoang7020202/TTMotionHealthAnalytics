@@ -1,0 +1,188 @@
+=== Cross-validation for height classification ===
+Finding optimal hyperparameters for height classification...
+Fitting 3 folds for each of 108 candidates, totalling 324 fits
+Best parameters: {'max_depth': 20, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 50}
+Best cross-validation accuracy: 0.3519
+Using optimized parameters: n_estimators=50, max_depth=20, min_samples_split=5
+
+--- Fold 1/5 ---
+Random Forest for height classification accuracy: 0.8566
+Feature importance plot saved to rf_feature_importance/importance_height_fold_1_20250507_214024.png
+
+Top feature importances:
+ay_mean: 0.0562
+az_mean: 0.0525
+ax_mean: 0.0507
+gy_mean: 0.0466
+gx_mean: 0.0405
+az_rms: 0.0373
+gy_rms: 0.0363
+gx_rms: 0.0348
+gy_var: 0.0347
+gz_rms: 0.0340
+Confusion matrix saved to rf_confusion_matrices/cm_height_fold_1_20250507_214025.png
+Sample tree visualization saved to rf_tree_samples/tree_height_sample_0_20250507_214026.png
+Model saved to rf_models/rf_height_fold_1.joblib
+
+--- Fold 2/5 ---
+Random Forest for height classification accuracy: 0.8561
+Feature importance plot saved to rf_feature_importance/importance_height_fold_2_20250507_214035.png
+
+Top feature importances:
+ay_mean: 0.0556
+az_mean: 0.0515
+ax_mean: 0.0513
+gy_mean: 0.0473
+gx_mean: 0.0395
+az_rms: 0.0355
+gy_var: 0.0354
+gy_rms: 0.0349
+gx_rms: 0.0348
+gz_rms: 0.0343
+Confusion matrix saved to rf_confusion_matrices/cm_height_fold_2_20250507_214035.png
+Model saved to rf_models/rf_height_fold_2.joblib
+
+--- Fold 3/5 ---
+Random Forest for height classification accuracy: 0.8565
+Feature importance plot saved to rf_feature_importance/importance_height_fold_3_20250507_214041.png
+
+Top feature importances:
+ay_mean: 0.0556
+az_mean: 0.0518
+ax_mean: 0.0506
+gy_mean: 0.0483
+gx_mean: 0.0397
+az_rms: 0.0370
+gy_var: 0.0360
+gy_rms: 0.0352
+gz_rms: 0.0347
+gx_rms: 0.0338
+Confusion matrix saved to rf_confusion_matrices/cm_height_fold_3_20250507_214042.png
+Model saved to rf_models/rf_height_fold_3.joblib
+
+--- Fold 4/5 ---
+Random Forest for height classification accuracy: 0.8531
+Feature importance plot saved to rf_feature_importance/importance_height_fold_4_20250507_214048.png
+
+Top feature importances:
+ay_mean: 0.0541
+az_mean: 0.0521
+ax_mean: 0.0520
+gy_mean: 0.0478
+gx_mean: 0.0408
+gy_var: 0.0365
+az_rms: 0.0365
+gz_rms: 0.0350
+gy_rms: 0.0346
+gx_var: 0.0340
+Confusion matrix saved to rf_confusion_matrices/cm_height_fold_4_20250507_214049.png
+Model saved to rf_models/rf_height_fold_4.joblib
+
+--- Fold 5/5 ---
+Random Forest for height classification accuracy: 0.8558
+Feature importance plot saved to rf_feature_importance/importance_height_fold_5_20250507_214054.png
+
+Top feature importances:
+ay_mean: 0.0551
+az_mean: 0.0523
+ax_mean: 0.0523
+gy_mean: 0.0456
+gx_mean: 0.0407
+az_rms: 0.0361
+gz_rms: 0.0353
+gy_rms: 0.0352
+gy_var: 0.0344
+gx_var: 0.0342
+Confusion matrix saved to rf_confusion_matrices/cm_height_fold_5_20250507_214055.png
+Model saved to rf_models/rf_height_fold_5.joblib
+
+Mean Accuracy across 5 folds: 0.8556
+
+Overall Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.87      0.82      0.84     29100
+         low       0.87      0.81      0.84     27450
+      medium       0.84      0.91      0.88     40800
+
+    accuracy                           0.86     97350
+   macro avg       0.86      0.85      0.85     97350
+weighted avg       0.86      0.86      0.85     97350
+
+Confusion matrix saved to rf_confusion_matrices/cm_height_20250507_214056.png
+
+=== Feature Group Importance Analysis for height ===
+
+--- Testing feature group: acceleration_means ---
+Fold 1: Accuracy = 0.5764
+Fold 2: Accuracy = 0.5731
+Fold 3: Accuracy = 0.5700
+Fold 4: Accuracy = 0.5703
+Fold 5: Accuracy = 0.5698
+Average accuracy with acceleration_means: 0.5719
+
+--- Testing feature group: gyroscope_means ---
+Fold 1: Accuracy = 0.4949
+Fold 2: Accuracy = 0.4921
+Fold 3: Accuracy = 0.4923
+Fold 4: Accuracy = 0.4892
+Fold 5: Accuracy = 0.4916
+Average accuracy with gyroscope_means: 0.4920
+
+--- Testing feature group: acceleration_variance ---
+Fold 1: Accuracy = 0.4525
+Fold 2: Accuracy = 0.4521
+Fold 3: Accuracy = 0.4511
+Fold 4: Accuracy = 0.4646
+Fold 5: Accuracy = 0.4575
+Average accuracy with acceleration_variance: 0.4556
+
+--- Testing feature group: gyroscope_variance ---
+Fold 1: Accuracy = 0.4830
+Fold 2: Accuracy = 0.4888
+Fold 3: Accuracy = 0.4893
+Fold 4: Accuracy = 0.4861
+Fold 5: Accuracy = 0.4864
+Average accuracy with gyroscope_variance: 0.4867
+
+--- Testing feature group: acceleration_rms ---
+Fold 1: Accuracy = 0.4781
+Fold 2: Accuracy = 0.4809
+Fold 3: Accuracy = 0.4769
+Fold 4: Accuracy = 0.4821
+Fold 5: Accuracy = 0.4778
+Average accuracy with acceleration_rms: 0.4792
+
+--- Testing feature group: gyroscope_rms ---
+Fold 1: Accuracy = 0.4829
+Fold 2: Accuracy = 0.4879
+Fold 3: Accuracy = 0.4824
+Fold 4: Accuracy = 0.4847
+Fold 5: Accuracy = 0.4834
+Average accuracy with gyroscope_rms: 0.4843
+
+--- Testing feature group: aggregate_stats ---
+Fold 1: Accuracy = 0.5639
+Fold 2: Accuracy = 0.5632
+Fold 3: Accuracy = 0.5643
+Fold 4: Accuracy = 0.5568
+Fold 5: Accuracy = 0.5586
+Average accuracy with aggregate_stats: 0.5614
+
+--- Testing feature group: frequency_domain ---
+Fold 1: Accuracy = 0.4187
+Fold 2: Accuracy = 0.4216
+Fold 3: Accuracy = 0.4158
+Fold 4: Accuracy = 0.4184
+Fold 5: Accuracy = 0.4171
+Average accuracy with frequency_domain: 0.4183
+
+--- Testing feature group: distribution_stats ---
+Fold 1: Accuracy = 0.4561
+Fold 2: Accuracy = 0.4522
+Fold 3: Accuracy = 0.4541
+Fold 4: Accuracy = 0.4523
+Fold 5: Accuracy = 0.4553
+Average accuracy with distribution_stats: 0.4540
+
+Feature group importance plot saved to rf_feature_groups/group_importance_height_20250507_214358.png

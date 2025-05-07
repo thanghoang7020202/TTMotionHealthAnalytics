@@ -16,6 +16,7 @@ classifyData.xlsx
 *.h5
 **/*.h5
 **/*.pkl
+**/*.joblib
 
 # all files in the .venv directory
 .venv
