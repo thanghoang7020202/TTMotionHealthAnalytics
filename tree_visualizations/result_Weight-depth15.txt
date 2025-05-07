@@ -1,0 +1,52 @@
+=== Cross-validation for weight classification ===
+
+--- Fold 1/5 ---
+Decision Tree for weight classification accuracy: 0.69
+Visualization saved to tree_visualizations/DT_weight_f#_1_weight_15_20250507_202215.png
+Feature importance plot saved to feature_importance/importance_20250507_202456.png
+
+Top feature importances:
+ay_mean: 0.0772
+az_mean: 0.0696
+ax_mean: 0.0525
+az_rms: 0.0492
+gx_mean: 0.0487
+gy_mean: 0.0484
+g_max: 0.0446
+az_var: 0.0443
+gz_rms: 0.0418
+gy_var: 0.0409
+gx_var: 0.0361
+a_min: 0.0304
+ay_rms: 0.0303
+gz_mean: 0.0302
+gy_rms: 0.0294
+
+--- Fold 2/5 ---
+Decision Tree for weight classification accuracy: 0.70
+Visualization saved to tree_visualizations/DT_weight_f#_2_weight_15_20250507_202529.png
+
+--- Fold 3/5 ---
+Decision Tree for weight classification accuracy: 0.69
+Visualization saved to tree_visualizations/DT_weight_f#_3_weight_15_20250507_202851.png
+
+--- Fold 4/5 ---
+Decision Tree for weight classification accuracy: 0.69
+Visualization saved to tree_visualizations/DT_weight_f#_4_weight_15_20250507_203209.png
+
+--- Fold 5/5 ---
+Decision Tree for weight classification accuracy: 0.69
+Visualization saved to tree_visualizations/DT_weight_f#_5_weight_15_20250507_203521.png
+
+Mean Accuracy across 5 folds: 0.6927
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.67      0.68      0.67     29250
+         low       0.69      0.69      0.69     31500
+      medium       0.71      0.71      0.71     36600
+
+    accuracy                           0.69     97350
+   macro avg       0.69      0.69      0.69     97350
+weighted avg       0.69      0.69      0.69     97350

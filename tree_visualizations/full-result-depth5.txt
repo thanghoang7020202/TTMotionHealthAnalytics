@@ -1,0 +1,160 @@
+=== Cross-validation for height classification ===
+
+--- Fold 1/5 ---
+Decision Tree for height classification accuracy: 0.54
+Visualization saved to tree_visualizations/DT_height_f#_1_height_5_20250507_204023.png
+Feature importance plot saved to feature_importance/importance_20250507_204025.png
+
+Top feature importances:
+ay_mean: 0.2112
+ax_mean: 0.1870
+az_mean: 0.1523
+a_max: 0.0596
+g_max: 0.0596
+g_entropy: 0.0595
+ay_var: 0.0534
+gz_var: 0.0530
+a_skewn: 0.0485
+az_var: 0.0261
+gy_rms: 0.0197
+az_rms: 0.0181
+gy_var: 0.0162
+gx_var: 0.0126
+g_kurt: 0.0097
+
+--- Fold 2/5 ---
+Decision Tree for height classification accuracy: 0.54
+Visualization saved to tree_visualizations/DT_height_f#_2_height_5_20250507_204028.png
+
+--- Fold 3/5 ---
+Decision Tree for height classification accuracy: 0.53
+Visualization saved to tree_visualizations/DT_height_f#_3_height_5_20250507_204032.png
+
+--- Fold 4/5 ---
+Decision Tree for height classification accuracy: 0.54
+Visualization saved to tree_visualizations/DT_height_f#_4_height_5_20250507_204037.png
+
+--- Fold 5/5 ---
+Decision Tree for height classification accuracy: 0.53
+Visualization saved to tree_visualizations/DT_height_f#_5_height_5_20250507_204042.png
+
+Mean Accuracy across 5 folds: 0.5346
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.50      0.48      0.49     29100
+         low       0.53      0.35      0.42     27450
+      medium       0.55      0.70      0.62     40800
+
+    accuracy                           0.53     97350
+   macro avg       0.53      0.51      0.51     97350
+weighted avg       0.53      0.53      0.52     97350
+
+
+=== Cross-validation for weight classification ===
+
+--- Fold 1/5 ---
+Decision Tree for weight classification accuracy: 0.49
+Visualization saved to tree_visualizations/DT_weight_f#_1_weight_5_20250507_204047.png
+Feature importance plot saved to feature_importance/importance_20250507_204049.png
+
+Top feature importances:
+az_rms: 0.1902
+ay_mean: 0.1272
+gx_var: 0.1015
+g_max: 0.0940
+az_var: 0.0930
+az_mean: 0.0874
+ax_mean: 0.0682
+gz_rms: 0.0587
+gz_mean: 0.0545
+gy_var: 0.0366
+a_max: 0.0279
+gx_mean: 0.0218
+gy_mean: 0.0178
+a_skewn: 0.0141
+g_kurt: 0.0035
+
+--- Fold 2/5 ---
+Decision Tree for weight classification accuracy: 0.49
+Visualization saved to tree_visualizations/DT_weight_f#_2_weight_5_20250507_204053.png
+
+--- Fold 3/5 ---
+Decision Tree for weight classification accuracy: 0.49
+Visualization saved to tree_visualizations/DT_weight_f#_3_weight_5_20250507_204058.png
+
+--- Fold 4/5 ---
+Decision Tree for weight classification accuracy: 0.48
+Visualization saved to tree_visualizations/DT_weight_f#_4_weight_5_20250507_204102.png
+
+--- Fold 5/5 ---
+Decision Tree for weight classification accuracy: 0.48
+Visualization saved to tree_visualizations/DT_weight_f#_5_weight_5_20250507_204107.png
+
+Mean Accuracy across 5 folds: 0.4843
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.47      0.44      0.45     29250
+         low       0.48      0.44      0.46     31500
+      medium       0.50      0.55      0.52     36600
+
+    accuracy                           0.48     97350
+   macro avg       0.48      0.48      0.48     97350
+weighted avg       0.48      0.48      0.48     97350
+
+
+=== Cross-validation for age classification ===
+
+--- Fold 1/5 ---
+Decision Tree for age classification accuracy: 0.61
+Visualization saved to tree_visualizations/DT_age_f#_1_age_5_20250507_204112.png
+Feature importance plot saved to feature_importance/importance_20250507_204114.png
+
+Top feature importances:
+az_rms: 0.2333
+ax_mean: 0.1342
+gx_var: 0.1094
+gy_mean: 0.0660
+a_entropy: 0.0649
+g_entropy: 0.0633
+g_max: 0.0511
+g_mean: 0.0418
+ax_var: 0.0378
+g_kurt: 0.0302
+az_mean: 0.0267
+a_max: 0.0253
+az_var: 0.0251
+ay_rms: 0.0231
+gx_mean: 0.0216
+
+--- Fold 2/5 ---
+Decision Tree for age classification accuracy: 0.61
+Visualization saved to tree_visualizations/DT_age_f#_2_age_5_20250507_204117.png
+
+--- Fold 3/5 ---
+Decision Tree for age classification accuracy: 0.60
+Visualization saved to tree_visualizations/DT_age_f#_3_age_5_20250507_204122.png
+
+--- Fold 4/5 ---
+Decision Tree for age classification accuracy: 0.61
+Visualization saved to tree_visualizations/DT_age_f#_4_age_5_20250507_204126.png
+
+--- Fold 5/5 ---
+Decision Tree for age classification accuracy: 0.62
+Visualization saved to tree_visualizations/DT_age_f#_5_age_5_20250507_204131.png
+
+Mean Accuracy across 5 folds: 0.6090
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.49      0.20      0.28     18150
+         low       0.60      0.50      0.54     26900
+      medium       0.63      0.81      0.71     52300
+
+    accuracy                           0.61     97350
+   macro avg       0.57      0.50      0.51     97350
+weighted avg       0.59      0.61      0.58     97350

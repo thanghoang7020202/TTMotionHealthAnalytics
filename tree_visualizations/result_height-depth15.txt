@@ -1,0 +1,52 @@
+=== Cross-validation for height classification ===
+
+--- Fold 1/5 ---
+Decision Tree for height classification accuracy: 0.73
+Visualization saved to tree_visualizations/DT_height_f#_1_height_15_20250507_195800.png
+Feature importance plot saved to feature_importance/importance_20250507_200024.png
+
+Top feature importances:
+ay_mean: 0.0910
+az_mean: 0.0793
+ax_mean: 0.0713
+gy_mean: 0.0521
+gx_mean: 0.0444
+gy_var: 0.0438
+az_rms: 0.0419
+gx_var: 0.0413
+g_max: 0.0368
+ay_var: 0.0361
+gx_rms: 0.0353
+az_var: 0.0350
+g_entropy: 0.0295
+a_min: 0.0284
+a_max: 0.0277
+
+--- Fold 2/5 ---
+Decision Tree for height classification accuracy: 0.73
+Visualization saved to tree_visualizations/DT_height_f#_2_height_15_20250507_200054.png
+
+--- Fold 3/5 ---
+Decision Tree for height classification accuracy: 0.73
+Visualization saved to tree_visualizations/DT_height_f#_3_height_15_20250507_200355.png
+
+--- Fold 4/5 ---
+Decision Tree for height classification accuracy: 0.73
+Visualization saved to tree_visualizations/DT_height_f#_4_height_15_20250507_200648.png
+
+--- Fold 5/5 ---
+Decision Tree for height classification accuracy: 0.73
+Visualization saved to tree_visualizations/DT_height_f#_5_height_15_20250507_201004.png
+
+Mean Accuracy across 5 folds: 0.7314
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.73      0.71      0.72     29100
+         low       0.71      0.69      0.70     27450
+      medium       0.75      0.78      0.76     40800
+
+    accuracy                           0.73     97350
+   macro avg       0.73      0.72      0.73     97350
+weighted avg       0.73      0.73      0.73     97350

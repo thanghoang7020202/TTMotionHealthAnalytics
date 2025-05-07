@@ -1,0 +1,52 @@
+=== Age Classification ===
+
+--- Fold 1/5 ---
+Decision Tree for age classification accuracy: 0.76
+Visualization saved to tree_visualizations/decision_tree_age_fold_1_20250507_193151.png
+Feature importance plot saved to feature_importance/importance_20250507_193418.png
+
+Top feature importances:
+ay_mean: 0.0708
+az_rms: 0.0677
+az_mean: 0.0637
+ax_mean: 0.0580
+gy_mean: 0.0554
+gx_mean: 0.0553
+gx_var: 0.0509
+g_mean: 0.0429
+az_var: 0.0421
+g_max: 0.0353
+a_min: 0.0323
+gy_rms: 0.0316
+gz_rms: 0.0308
+a_entropy: 0.0285
+gz_var: 0.0258
+
+--- Fold 2/5 ---
+Decision Tree for age classification accuracy: 0.75
+Visualization saved to tree_visualizations/decision_tree_age_fold_2_20250507_193447.png
+
+--- Fold 3/5 ---
+Decision Tree for age classification accuracy: 0.76
+Visualization saved to tree_visualizations/decision_tree_age_fold_3_20250507_193746.png
+
+--- Fold 4/5 ---
+Decision Tree for age classification accuracy: 0.75
+Visualization saved to tree_visualizations/decision_tree_age_fold_4_20250507_194052.png
+
+--- Fold 5/5 ---
+Decision Tree for age classification accuracy: 0.77
+Visualization saved to tree_visualizations/decision_tree_age_fold_5_20250507_194350.png
+
+Mean Accuracy across 5 folds: 0.7584
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.69      0.62      0.65     18150
+         low       0.76      0.71      0.73     26900
+      medium       0.78      0.83      0.80     52300
+
+    accuracy                           0.76     97350
+   macro avg       0.74      0.72      0.73     97350
+weighted avg       0.76      0.76      0.76     97350

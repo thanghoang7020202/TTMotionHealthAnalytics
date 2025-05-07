@@ -6,6 +6,17 @@ classifyData.xlsx
 **/*.xlsx
 **/*.xls
 
+# all images
+*.png
+**/.png
+**/*.jpg
+**/*.jpeg
+
+# all models
+*.h5
+**/*.h5
+**/*.pkl
+
 # all files in the .venv directory
 .venv
 venv

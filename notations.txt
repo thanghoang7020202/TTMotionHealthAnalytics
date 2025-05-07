@@ -1,5 +1,3 @@
-
-
 id : An unique ID to identify players
 ,date : The data collected date
 ,testmode: Three testing modes: swing in the air, full power stroke, and stable hitting, with values 0, 1, and 2 respectively
@@ -45,7 +43,7 @@ id : An unique ID to identify players
 ,playYears : Number of years players have played ball games: high/medium/low
 ,height : player height (high/medium/low)
 ,weight : player weight (high/medium/low)
-,handedness : Player’s dominant hand: 1 for the right hand; 0 for the left hand
+,handedness : hanPlayer’s dominant d: 1 for the right hand; 0 for the left hand
 ,holdRacketHanded : The hand holds the racket: 1 for the right hand and 0 for the left hand
 ,newv1 : description for newv1
 ,newv2 : description for newv2
