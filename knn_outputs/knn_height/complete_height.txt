@@ -1,0 +1,201 @@
+--- Data Types Information ---
+Target variable 'height' type: object
+Unique values in 'height': ['high' 'low' 'medium']
+
+--- Target Variable Encoding ---
+Height class mapping: {0: 'high', 1: 'low', 2: 'medium'}
+
+--- Data Preprocessing ---
+Feature data types before standardization:
+float64    34
+Name: count, dtype: int64
+
+Checking for NaN values:
+Total NaN values: 0
+Train shape: (68145, 34)
+Test shape: (29205, 34)
+
+--- Exploratory Data Analysis ---
+
+Class distribution for height:
+2    40800
+0    29100
+1    27450
+Name: count, dtype: int64
+2    0.419
+0    0.299
+1    0.282
+Name: proportion, dtype: float64
+
+Feature statistics:
+                 mean           std           min           max
+a_psdx   1.772384e+09  1.389460e+10  1.448610e+04  7.770000e+11
+g_psdx   1.467490e+09  9.678203e+09  2.816407e+05  3.600000e+11
+a_fft    1.140358e+05  3.430765e+05 -1.736588e+06  1.334213e+07
+g_fft    1.125574e+05  3.304920e+05 -8.271262e+05  1.098560e+07
+a_max    1.549465e+04  7.515710e+03  6.212890e+01  4.889080e+04
+g_max    1.537545e+04  4.738199e+03  2.130728e+01  4.103048e+04
+ay_mean -2.183641e+02  3.992109e+03 -1.687200e+04  2.548733e+04
+a_mean   6.766522e+03  3.377333e+03  5.770670e+01  3.156096e+04
+ax_rms   4.875049e+03  2.902292e+03  3.208163e+01  2.576237e+04
+ax_mean -2.921555e+03  2.845661e+03 -2.555750e+04  1.509647e+04
+
+--- Feature Correlation Analysis ---
+Top 10 features correlated with height:
+a_entropy    0.114481
+g_entropy    0.113764
+az_mean      0.091645
+g_min        0.086518
+gx_rms       0.055992
+gx_var       0.039227
+ax_mean      0.035549
+ay_mean      0.014875
+ax_rms       0.013001
+gx_mean      0.011586
+Name: height_encoded, dtype: float64
+
+--- Feature Selection ---
+
+Top 15 selected features:
+1. az_mean
+2. gy_mean
+3. az_var
+4. gx_var
+5. gy_var
+6. ay_rms
+7. az_rms
+8. gx_rms
+9. gy_rms
+10. a_max
+11. a_mean
+12. g_min
+13. a_skewn
+14. a_entropy
+15. g_entropy
+
+--- Finding Optimal k Value ---
+
+Best k value: 7 with accuracy: 0.7926
+
+--- Hyperparameter Tuning ---
+
+Grid Search Results:
+Best parameters: {'n_neighbors': 7, 'p': 1, 'weights': 'distance'}
+Best cross-validation score: 0.7917
+
+--- Cross-Validation ---
+
+Cross-Validation Results for height (k=7, 5-fold):
+CV Scores: [0.78002788 0.78369653 0.7848705  0.78428351 0.7810551 ]
+Mean CV Accuracy: 0.7828
+Standard Deviation: 0.0019
+
+--- Final Model Evaluation ---
+
+Evaluation for height classification (k=7):
+Accuracy: 0.7926
+Precision: 0.7928
+Recall: 0.7926
+F1 Score: 0.7927
+
+--- Confusion Matrix ---
+
+--- Classification Report ---
+              precision    recall  f1-score   support
+
+           0       0.77      0.79      0.78      8730
+           1       0.77      0.76      0.76      8235
+           2       0.82      0.82      0.82     12240
+
+    accuracy                           0.79     29205
+   macro avg       0.79      0.79      0.79     29205
+weighted avg       0.79      0.79      0.79     29205
+
+
+--- Feature Importance Analysis ---
+
+Top 15 features by importance:
+      Feature       Score
+2     az_mean  968.083934
+14     az_rms  762.995654
+4     gy_mean  479.663391
+32  a_entropy  474.582260
+33  g_entropy  465.383554
+10     gy_var  404.967327
+16     gy_rms  368.931457
+23      g_min  292.238141
+18      a_max  244.748771
+24    a_skewn  225.952854
+8      az_var  222.971909
+9      gx_var  212.205043
+15     gx_rms  185.313438
+19     a_mean  127.912696
+13     ay_rms  123.048128
+
+--- Performance by Feature Group ---
+
+Evaluating Base Sensor Features...
+Accuracy: 0.8655
+F1-Score: 0.8654
+
+Evaluating Derived Sensor Features...
+Accuracy: 0.6058
+F1-Score: 0.6039
+
+Evaluating FFT Features...
+Accuracy: 0.4044
+F1-Score: 0.3983
+
+Evaluating All Features...
+Accuracy: 0.8805
+F1-Score: 0.8804
+
+Evaluating Base + Derived...
+Accuracy: 0.8795
+F1-Score: 0.8795
+
+Evaluating Base + FFT...
+Accuracy: 0.8679
+F1-Score: 0.8677
+
+Evaluating Derived + FFT...
+Accuracy: 0.6165
+F1-Score: 0.6144
+
+Best feature group by accuracy: All Features (Accuracy: 0.8805)
+Best feature group by F1-Score: All Features (F1-Score: 0.8804)
+
+--- Learning Curve Analysis ---
+
+--- Summary ---
+Best model parameters: {'n_neighbors': 7, 'p': 1, 'weights': 'distance'}
+Final model accuracy: 0.7926
+Other metrics: {'accuracy': 0.792638246875535, 'precision': 0.7928271912938407, 'recall': 0.792638246875535, 'f1_score': 0.7927045765398834}
+Top 5 most important features: az_mean, gy_mean, az_var, gx_var, gy_var
+
+--- Misclassifications Analysis ---
+Number of misclassified samples: 6056
+
+Misclassification counts by class:
+True Height  Predicted Height
+high         low                  724
+             medium              1132
+low          high                 958
+             medium               998
+medium       high                1057
+             low                 1187
+dtype: int64
+
+Most commonly confused height categories:
+True Height  Predicted Height
+medium       low                 1187
+high         medium              1132
+medium       high                1057
+dtype: int64
+
+--- Recommendations ---
+1. Best features for height prediction: az_mean, gy_mean, az_var, gx_var, gy_var
+2. Optimal number of neighbors (k): 7
+3. Best distance metric: Manhattan
+4. Best feature group: All Features
+5. Model achieved good performance with an accuracy of 79.26%
