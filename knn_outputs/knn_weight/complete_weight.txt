@@ -1,0 +1,203 @@
+
+--- Data Types Information ---
+Target variable weight type: object
+Unique values in 'weight': ['high' 'medium' 'low']
+
+--- Target Variable Encoding ---
+weight mapping: {0: 'high', 1: 'low', 2: 'medium'}
+
+--- Data Preprocessing ---
+Feature data types before standardization:
+float64    34
+Name: count, dtype: int64
+
+Checking for NaN values:
+Total NaN values: 0
+Train shape: (68145, 34)
+Test shape: (29205, 34)
+
+--- Exploratory Data Analysis ---
+
+Class distribution for weight:
+2    36600
+1    31500
+0    29250
+Name: count, dtype: int64
+2    0.376
+1    0.324
+0    0.300
+Name: proportion, dtype: float64
+
+Feature statistics:
+                 mean           std           min           max
+a_psdx   1.772384e+09  1.389460e+10  1.448610e+04  7.770000e+11
+g_psdx   1.467490e+09  9.678203e+09  2.816407e+05  3.600000e+11
+a_fft    1.140358e+05  3.430765e+05 -1.736588e+06  1.334213e+07
+g_fft    1.125574e+05  3.304920e+05 -8.271262e+05  1.098560e+07
+a_max    1.549465e+04  7.515710e+03  6.212890e+01  4.889080e+04
+g_max    1.537545e+04  4.738199e+03  2.130728e+01  4.103048e+04
+ay_mean -2.183641e+02  3.992109e+03 -1.687200e+04  2.548733e+04
+a_mean   6.766522e+03  3.377333e+03  5.770670e+01  3.156096e+04
+ax_rms   4.875049e+03  2.902292e+03  3.208163e+01  2.576237e+04
+ax_mean -2.921555e+03  2.845661e+03 -2.555750e+04  1.509647e+04
+
+--- Feature Correlation Analysis ---
+
+Top 10 features correlated with weight:
+az_mean    0.092670
+gz_rms     0.051378
+g_max      0.041076
+gz_var     0.038070
+gx_mean    0.034961
+ay_var     0.024945
+a_kurt     0.024865
+ax_mean    0.024350
+g_kurt     0.020036
+ax_rms     0.018410
+Name: encoded, dtype: float64
+
+--- Feature Selection ---
+
+Top 15 selected features:
+1. az_mean
+2. gy_mean
+3. ax_var
+4. az_var
+5. gx_var
+6. gy_var
+7. ax_rms
+8. ay_rms
+9. az_rms
+10. gx_rms
+11. gy_rms
+12. a_max
+13. a_mean
+14. a_skewn
+15. g_skewn
+
+--- Finding Optimal k Value ---
+
+Best k value: 5 with accuracy: 0.7975
+
+--- Hyperparameter Tuning ---
+
+Grid Search Results:
+Best parameters: {'n_neighbors': 5, 'p': 1, 'weights': 'distance'}
+Best cross-validation score: 0.7959
+
+--- Cross-Validation ---
+
+Cross-Validation Results for weight (k=5, 5-fold):
+CV Scores: [0.78655807 0.78619121 0.798151   0.78963974 0.78127522]
+Mean CV Accuracy: 0.7884
+Standard Deviation: 0.0056
+
+--- Final Model Evaluation ---
+
+Evaluation for weight classification (k=5):
+Accuracy: 0.7975
+Precision: 0.7994
+Recall: 0.7975
+F1 Score: 0.7977
+
+--- Confusion Matrix ---
+
+--- Classification Report ---
+              precision    recall  f1-score   support
+
+           0       0.76      0.81      0.78      8775
+           1       0.80      0.81      0.80      9450
+           2       0.83      0.77      0.80     10980
+
+    accuracy                           0.80     29205
+   macro avg       0.80      0.80      0.80     29205
+weighted avg       0.80      0.80      0.80     29205
+
+
+--- Feature Importance Analysis ---
+
+Top 15 features by importance:
+    Feature        Score
+2   az_mean  1044.770038
+14   az_rms   947.615460
+8    az_var   333.848502
+18    a_max   314.882431
+9    gx_var   256.687376
+10   gy_var   253.812767
+15   gx_rms   253.743947
+16   gy_rms   229.512116
+6    ax_var   207.329470
+24  a_skewn   166.934274
+19   a_mean   163.361357
+25  g_skewn   142.211499
+4   gy_mean   135.645204
+12   ax_rms   118.533721
+13   ay_rms   115.112389
+
+--- Performance by Feature Group ---
+
+Evaluating Base Sensor Features...
+Accuracy: 0.8581
+F1-Score: 0.8581
+
+Evaluating Derived Sensor Features...
+Accuracy: 0.5809
+F1-Score: 0.5807
+
+Evaluating FFT Features...
+Accuracy: 0.3766
+F1-Score: 0.3759
+
+Evaluating All Features...
+Accuracy: 0.8729
+F1-Score: 0.8729
+
+Evaluating Base + Derived...
+Accuracy: 0.8706
+F1-Score: 0.8705
+
+Evaluating Base + FFT...
+Accuracy: 0.8594
+F1-Score: 0.8594
+
+Evaluating Derived + FFT...
+Accuracy: 0.5985
+F1-Score: 0.5983
+
+Best feature group by accuracy: All Features (Accuracy: 0.8729)
+Best feature group by F1-Score: All Features (F1-Score: 0.8729)
+
+--- Learning Curve Analysis ---
+
+--- Summary ---
+Best model parameters: {'n_neighbors': 5, 'p': 1, 'weights': 'distance'}
+Final model accuracy: 0.7975
+Other metrics: {'accuracy': 0.7975346687211095, 'precision': 0.799440015568001, 'recall': 0.7975346687211095, 'f1_score': 0.7977346411846431}
+Top 5 most important features: az_mean, gy_mean, ax_var, az_var, gx_var
+
+--- Misclassifications Analysis ---
+Number of misclassified samples: 5913
+
+Misclassification counts by class:
+True weight  Predicted weight
+high         low                  795
+             medium               851
+low          high                 947
+             medium               830
+medium       high                1336
+             low                 1154
+dtype: int64
+
+Most commonly confused categories:
+True weight  Predicted weight
+medium       high                1336
+             low                 1154
+low          high                 947
+dtype: int64
+
+--- Recommendations ---
+1. Best features for prediction: az_mean, gy_mean, ax_var, az_var, gx_var
+2. Optimal number of neighbors (k): 5
+3. Best distance metric: Manhattan
+4. Best feature group: All Features
+5. Model achieved good performance with an accuracy of 79.75%
