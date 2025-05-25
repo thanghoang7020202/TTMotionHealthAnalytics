@@ -1,0 +1,2519 @@
+=== QUICK TEST WITH DEFAULT PARAMETERS ===
+Decision Tree for height classification (criterion=gini, max_depth=None): 0.74
+Decision Tree for height classification (criterion=gini, max_depth=None): 0.73
+Decision Tree for height classification (criterion=gini, max_depth=None): 0.74
+Decision Tree for height classification (criterion=gini, max_depth=None): 0.73
+Decision Tree for height classification (criterion=gini, max_depth=None): 0.73
+Mean Accuracy (default parameters): 0.73
+
+=== TESTING WITH BASIC PARAMETERS ===
+
+=== Cross-validation for height classification ===
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=gini, max_depth=5): 0.54
+Visualization saved to tree_visualizations/DT_height_f1_gini_d5_20250525_074418.png
+Feature importance plot saved to feature_importance/importance_height_gini_d5_20250525_074421.png
+
+Top feature importances:
+ay_mean: 0.2112
+ax_mean: 0.1870
+az_mean: 0.1523
+a_max: 0.0596
+g_max: 0.0596
+g_entropy: 0.0595
+ay_var: 0.0534
+gz_var: 0.0530
+a_skewn: 0.0485
+az_var: 0.0261
+gy_rms: 0.0197
+az_rms: 0.0181
+gy_var: 0.0162
+gx_var: 0.0126
+g_kurt: 0.0097
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=gini, max_depth=5): 0.54
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=gini, max_depth=5): 0.53
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=gini, max_depth=5): 0.54
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=gini, max_depth=5): 0.53
+
+Mean Accuracy across 5 folds: 0.5346
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.50      0.48      0.49     29100
+         low       0.53      0.35      0.42     27450
+      medium       0.55      0.70      0.62     40800
+
+    accuracy                           0.53     97350
+   macro avg       0.53      0.51      0.51     97350
+weighted avg       0.53      0.53      0.52     97350
+
+
+=== Cross-validation for weight classification ===
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=gini, max_depth=5): 0.49
+Visualization saved to tree_visualizations/DT_weight_f1_gini_d5_20250525_074433.png
+Feature importance plot saved to feature_importance/importance_weight_gini_d5_20250525_074435.png
+
+Top feature importances:
+az_rms: 0.1902
+ay_mean: 0.1272
+gx_var: 0.1015
+g_max: 0.0940
+az_var: 0.0930
+az_mean: 0.0874
+ax_mean: 0.0682
+gz_rms: 0.0587
+gz_mean: 0.0545
+gy_var: 0.0366
+a_max: 0.0279
+gx_mean: 0.0218
+gy_mean: 0.0178
+a_skewn: 0.0141
+g_kurt: 0.0035
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=gini, max_depth=5): 0.49
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=gini, max_depth=5): 0.49
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=gini, max_depth=5): 0.48
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=gini, max_depth=5): 0.48
+
+Mean Accuracy across 5 folds: 0.4843
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.47      0.44      0.45     29250
+         low       0.48      0.44      0.46     31500
+      medium       0.50      0.55      0.52     36600
+
+    accuracy                           0.48     97350
+   macro avg       0.48      0.48      0.48     97350
+weighted avg       0.48      0.48      0.48     97350
+
+
+=== Cross-validation for age classification ===
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=gini, max_depth=5): 0.61
+Visualization saved to tree_visualizations/DT_age_f1_gini_d5_20250525_074447.png
+Feature importance plot saved to feature_importance/importance_age_gini_d5_20250525_074458.png
+
+Top feature importances:
+az_rms: 0.2333
+ax_mean: 0.1342
+gx_var: 0.1094
+gy_mean: 0.0660
+a_entropy: 0.0649
+g_entropy: 0.0633
+g_max: 0.0511
+g_mean: 0.0418
+ax_var: 0.0378
+g_kurt: 0.0302
+az_mean: 0.0267
+a_max: 0.0253
+az_var: 0.0251
+ay_rms: 0.0231
+gx_mean: 0.0216
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=gini, max_depth=5): 0.61
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=gini, max_depth=5): 0.60
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=gini, max_depth=5): 0.61
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=gini, max_depth=5): 0.62
+
+Mean Accuracy across 5 folds: 0.6090
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.49      0.20      0.28     18150
+         low       0.60      0.50      0.54     26900
+      medium       0.63      0.81      0.71     52300
+
+    accuracy                           0.61     97350
+   macro avg       0.57      0.50      0.51     97350
+weighted avg       0.59      0.61      0.58     97350
+
+
+=== COMPREHENSIVE HYPERPARAMETER TUNING ===
+=== HYPERPARAMETER TUNING FOR DECISION TREE ===
+
+
+============================================================
+TUNING FOR TARGET: HEIGHT
+============================================================
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d3_20250525_074509.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d3_20250525_074510.png
+
+Top feature importances:
+ax_mean: 0.3220
+az_mean: 0.2943
+ay_mean: 0.1981
+gz_var: 0.0855
+a_skewn: 0.0595
+g_max: 0.0407
+a_entropy: 0.0000
+g_entropy: 0.0000
+g_kurt: 0.0000
+g_skewn: 0.0000
+a_fft: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+a_min: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.49
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+Mean Accuracy across 5 folds: 0.4822
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.53      0.21      0.30     29100
+         low       0.44      0.36      0.40     27450
+      medium       0.49      0.76      0.59     40800
+
+    accuracy                           0.48     97350
+   macro avg       0.49      0.44      0.43     97350
+weighted avg       0.49      0.48      0.45     97350
+
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d3_20250525_074522.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d3_20250525_074523.png
+
+Top feature importances:
+ax_mean: 0.3220
+az_mean: 0.2943
+ay_mean: 0.1981
+gz_var: 0.0855
+a_skewn: 0.0595
+g_max: 0.0407
+a_entropy: 0.0000
+g_entropy: 0.0000
+g_kurt: 0.0000
+g_skewn: 0.0000
+a_fft: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+a_min: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.49
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+Mean Accuracy across 5 folds: 0.4822
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.53      0.21      0.30     29100
+         low       0.44      0.36      0.40     27450
+      medium       0.49      0.76      0.59     40800
+
+    accuracy                           0.48     97350
+   macro avg       0.49      0.44      0.43     97350
+weighted avg       0.49      0.48      0.45     97350
+
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d3_20250525_074534.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d3_20250525_074535.png
+
+Top feature importances:
+ax_mean: 0.3220
+az_mean: 0.2943
+ay_mean: 0.1981
+gz_var: 0.0855
+a_skewn: 0.0595
+g_max: 0.0407
+a_entropy: 0.0000
+g_entropy: 0.0000
+g_kurt: 0.0000
+g_skewn: 0.0000
+a_fft: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+a_min: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.49
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=3): 0.48
+
+Mean Accuracy across 5 folds: 0.4822
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.53      0.21      0.30     29100
+         low       0.44      0.36      0.40     27450
+      medium       0.49      0.76      0.59     40800
+
+    accuracy                           0.48     97350
+   macro avg       0.49      0.44      0.43     97350
+weighted avg       0.49      0.48      0.45     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d5_20250525_074548.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d5_20250525_074550.png
+
+Top feature importances:
+ax_mean: 0.2556
+ay_mean: 0.1797
+az_mean: 0.1621
+g_max: 0.0554
+g_entropy: 0.0533
+ay_var: 0.0507
+az_rms: 0.0479
+gz_var: 0.0469
+a_skewn: 0.0326
+gy_mean: 0.0324
+az_var: 0.0256
+gx_mean: 0.0236
+gy_var: 0.0163
+g_kurt: 0.0072
+gy_rms: 0.0069
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.54
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.52
+
+Mean Accuracy across 5 folds: 0.5309
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.50      0.46      0.48     29100
+         low       0.55      0.32      0.40     27450
+      medium       0.54      0.72      0.62     40800
+
+    accuracy                           0.53     97350
+   macro avg       0.53      0.50      0.50     97350
+weighted avg       0.53      0.53      0.52     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d5_20250525_074607.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d5_20250525_074610.png
+
+Top feature importances:
+ax_mean: 0.2556
+ay_mean: 0.1797
+az_mean: 0.1621
+g_max: 0.0554
+g_entropy: 0.0533
+ay_var: 0.0507
+az_rms: 0.0479
+gz_var: 0.0469
+a_skewn: 0.0326
+gy_mean: 0.0324
+az_var: 0.0256
+gx_mean: 0.0236
+gy_var: 0.0163
+g_kurt: 0.0072
+gy_rms: 0.0069
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.54
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.52
+
+Mean Accuracy across 5 folds: 0.5309
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.50      0.46      0.48     29100
+         low       0.55      0.32      0.40     27450
+      medium       0.54      0.72      0.62     40800
+
+    accuracy                           0.53     97350
+   macro avg       0.53      0.50      0.50     97350
+weighted avg       0.53      0.53      0.52     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d5_20250525_074627.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d5_20250525_074630.png
+
+Top feature importances:
+ax_mean: 0.2556
+ay_mean: 0.1797
+az_mean: 0.1621
+g_max: 0.0554
+g_entropy: 0.0533
+ay_var: 0.0507
+az_rms: 0.0479
+gz_var: 0.0469
+a_skewn: 0.0326
+gy_mean: 0.0324
+az_var: 0.0256
+gx_mean: 0.0236
+gy_var: 0.0163
+g_kurt: 0.0072
+gy_rms: 0.0069
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.54
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.53
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=5): 0.52
+
+Mean Accuracy across 5 folds: 0.5309
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.50      0.46      0.48     29100
+         low       0.55      0.32      0.40     27450
+      medium       0.54      0.72      0.62     40800
+
+    accuracy                           0.53     97350
+   macro avg       0.53      0.50      0.50     97350
+weighted avg       0.53      0.53      0.52     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d7_20250525_074649.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d7_20250525_074655.png
+
+Top feature importances:
+ay_mean: 0.1716
+ax_mean: 0.1589
+az_mean: 0.1282
+gy_var: 0.0643
+az_rms: 0.0575
+g_entropy: 0.0497
+g_max: 0.0489
+gx_mean: 0.0382
+ay_var: 0.0298
+az_var: 0.0296
+gz_var: 0.0276
+gz_rms: 0.0266
+gy_mean: 0.0250
+gx_rms: 0.0229
+a_skewn: 0.0205
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.58
+
+Mean Accuracy across 5 folds: 0.5857
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.58      0.54      0.56     29100
+         low       0.60      0.40      0.48     27450
+      medium       0.58      0.75      0.66     40800
+
+    accuracy                           0.59     97350
+   macro avg       0.59      0.56      0.56     97350
+weighted avg       0.59      0.59      0.58     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d7_20250525_074718.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d7_20250525_074724.png
+
+Top feature importances:
+ay_mean: 0.1716
+ax_mean: 0.1590
+az_mean: 0.1283
+gy_var: 0.0642
+az_rms: 0.0575
+g_entropy: 0.0497
+g_max: 0.0489
+gx_mean: 0.0382
+ay_var: 0.0298
+az_var: 0.0296
+gz_var: 0.0276
+gz_rms: 0.0266
+gy_mean: 0.0250
+gx_rms: 0.0229
+a_skewn: 0.0205
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.58
+
+Mean Accuracy across 5 folds: 0.5856
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.58      0.54      0.56     29100
+         low       0.60      0.40      0.48     27450
+      medium       0.58      0.75      0.66     40800
+
+    accuracy                           0.59     97350
+   macro avg       0.59      0.56      0.56     97350
+weighted avg       0.59      0.59      0.58     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d7_20250525_074747.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d7_20250525_074753.png
+
+Top feature importances:
+ay_mean: 0.1717
+ax_mean: 0.1590
+az_mean: 0.1281
+gy_var: 0.0643
+az_rms: 0.0575
+g_entropy: 0.0495
+g_max: 0.0489
+gx_mean: 0.0382
+ay_var: 0.0298
+az_var: 0.0296
+gz_var: 0.0276
+gz_rms: 0.0266
+gy_mean: 0.0250
+gx_rms: 0.0229
+a_skewn: 0.0205
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.59
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=7): 0.58
+
+Mean Accuracy across 5 folds: 0.5856
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.58      0.54      0.56     29100
+         low       0.60      0.40      0.48     27450
+      medium       0.58      0.75      0.65     40800
+
+    accuracy                           0.59     97350
+   macro avg       0.59      0.56      0.56     97350
+weighted avg       0.59      0.59      0.58     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d10_20250525_074821.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d10_20250525_074846.png
+
+Top feature importances:
+ay_mean: 0.1197
+az_mean: 0.1075
+ax_mean: 0.1052
+az_rms: 0.0567
+gy_var: 0.0539
+g_max: 0.0419
+gx_mean: 0.0413
+gy_mean: 0.0406
+g_entropy: 0.0357
+gx_rms: 0.0338
+az_var: 0.0311
+gz_rms: 0.0308
+gx_var: 0.0304
+ay_var: 0.0281
+g_skewn: 0.0263
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+Mean Accuracy across 5 folds: 0.6590
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.67      0.61      0.64     29100
+         low       0.64      0.59      0.61     27450
+      medium       0.66      0.74      0.70     40800
+
+    accuracy                           0.66     97350
+   macro avg       0.66      0.65      0.65     97350
+weighted avg       0.66      0.66      0.66     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d10_20250525_074921.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d10_20250525_074947.png
+
+Top feature importances:
+ay_mean: 0.1194
+az_mean: 0.1074
+ax_mean: 0.1044
+az_rms: 0.0567
+gy_var: 0.0535
+g_max: 0.0420
+gx_mean: 0.0412
+gy_mean: 0.0408
+g_entropy: 0.0357
+gx_rms: 0.0336
+az_var: 0.0311
+gz_rms: 0.0305
+gx_var: 0.0304
+ay_var: 0.0285
+g_skewn: 0.0266
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+Mean Accuracy across 5 folds: 0.6589
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.67      0.61      0.64     29100
+         low       0.64      0.59      0.61     27450
+      medium       0.66      0.74      0.70     40800
+
+    accuracy                           0.66     97350
+   macro avg       0.66      0.65      0.65     97350
+weighted avg       0.66      0.66      0.66     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_d10_20250525_075021.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_d10_20250525_075046.png
+
+Top feature importances:
+ay_mean: 0.1197
+az_mean: 0.1074
+ax_mean: 0.1044
+az_rms: 0.0567
+gy_var: 0.0540
+g_max: 0.0420
+gx_mean: 0.0411
+gy_mean: 0.0403
+g_entropy: 0.0357
+gx_rms: 0.0337
+az_var: 0.0309
+gx_var: 0.0306
+gz_rms: 0.0305
+ay_var: 0.0283
+g_skewn: 0.0264
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=10): 0.66
+
+Mean Accuracy across 5 folds: 0.6588
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.67      0.61      0.64     29100
+         low       0.64      0.59      0.61     27450
+      medium       0.66      0.74      0.70     40800
+
+    accuracy                           0.66     97350
+   macro avg       0.66      0.65      0.65     97350
+weighted avg       0.66      0.66      0.66     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.74
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_dNone_20250525_075220.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_dNone_20250525_075634.png
+
+Top feature importances:
+ay_mean: 0.0743
+az_mean: 0.0640
+ax_mean: 0.0632
+gy_mean: 0.0472
+gx_mean: 0.0463
+gy_var: 0.0421
+az_rms: 0.0395
+gx_var: 0.0368
+g_max: 0.0342
+az_var: 0.0330
+gx_rms: 0.0328
+a_min: 0.0325
+ay_var: 0.0310
+g_mean: 0.0297
+a_skewn: 0.0277
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.75
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.75
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.75
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.75
+
+Mean Accuracy across 5 folds: 0.7464
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.73      0.73      0.73     29100
+         low       0.72      0.72      0.72     27450
+      medium       0.78      0.78      0.78     40800
+
+    accuracy                           0.75     97350
+   macro avg       0.74      0.74      0.74     97350
+weighted avg       0.75      0.75      0.75     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.74
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_dNone_20250525_075812.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_dNone_20250525_080158.png
+
+Top feature importances:
+ay_mean: 0.0751
+az_mean: 0.0643
+ax_mean: 0.0628
+gy_mean: 0.0479
+gx_mean: 0.0470
+gy_var: 0.0417
+az_rms: 0.0400
+gx_var: 0.0367
+g_max: 0.0346
+gx_rms: 0.0339
+az_var: 0.0337
+a_min: 0.0327
+ay_var: 0.0322
+g_mean: 0.0289
+a_skewn: 0.0282
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.75
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.75
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.74
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.75
+
+Mean Accuracy across 5 folds: 0.7449
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.72      0.73      0.73     29100
+         low       0.71      0.71      0.71     27450
+      medium       0.78      0.77      0.78     40800
+
+    accuracy                           0.74     97350
+   macro avg       0.74      0.74      0.74     97350
+weighted avg       0.75      0.74      0.74     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.74
+Visualization saved to tree_visualizations/DT_height_f1_log_loss_dNone_20250525_080326.png
+Feature importance plot saved to feature_importance/importance_height_log_loss_dNone_20250525_080632.png
+
+Top feature importances:
+ay_mean: 0.0785
+ax_mean: 0.0664
+az_mean: 0.0664
+gy_mean: 0.0496
+gx_mean: 0.0467
+gy_var: 0.0428
+az_rms: 0.0394
+gx_var: 0.0377
+g_max: 0.0354
+gx_rms: 0.0337
+az_var: 0.0335
+a_min: 0.0326
+ay_var: 0.0310
+g_mean: 0.0297
+g_entropy: 0.0277
+
+--- Fold 2/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.74
+
+--- Fold 3/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.74
+
+--- Fold 4/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.74
+
+--- Fold 5/5 ---
+Decision Tree for height classification (criterion=log_loss, max_depth=None): 0.74
+
+Mean Accuracy across 5 folds: 0.7422
+
+Classification Report for height:
+              precision    recall  f1-score   support
+
+        high       0.72      0.74      0.73     29100
+         low       0.71      0.71      0.71     27450
+      medium       0.78      0.77      0.77     40800
+
+    accuracy                           0.74     97350
+   macro avg       0.74      0.74      0.74     97350
+weighted avg       0.74      0.74      0.74     97350
+
+
+************************************************************
+BEST PARAMETERS FOR HEIGHT:
+Criterion: log_loss
+Max Depth: None
+Min Samples Split: 2
+Best Mean Accuracy: 0.7464
+************************************************************
+
+============================================================
+TUNING FOR TARGET: WEIGHT
+============================================================
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d3_20250525_080710.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d3_20250525_080711.png
+
+Top feature importances:
+az_rms: 0.4447
+gy_var: 0.1412
+gx_var: 0.1382
+az_mean: 0.1320
+ax_mean: 0.1064
+g_max: 0.0375
+a_entropy: 0.0000
+g_entropy: 0.0000
+g_kurt: 0.0000
+g_skewn: 0.0000
+a_fft: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+a_skewn: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.46
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.45
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+
+Mean Accuracy across 5 folds: 0.4453
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.43      0.53      0.47     29250
+         low       0.47      0.35      0.40     31500
+      medium       0.44      0.46      0.45     36600
+
+    accuracy                           0.45     97350
+   macro avg       0.45      0.45      0.44     97350
+weighted avg       0.45      0.45      0.44     97350
+
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d3_20250525_080722.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d3_20250525_080723.png
+
+Top feature importances:
+az_rms: 0.4447
+gy_var: 0.1412
+gx_var: 0.1382
+az_mean: 0.1320
+ax_mean: 0.1064
+g_max: 0.0375
+a_entropy: 0.0000
+g_entropy: 0.0000
+g_kurt: 0.0000
+g_skewn: 0.0000
+a_fft: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+a_skewn: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.46
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.45
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+
+Mean Accuracy across 5 folds: 0.4453
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.43      0.53      0.47     29250
+         low       0.47      0.35      0.40     31500
+      medium       0.44      0.46      0.45     36600
+
+    accuracy                           0.45     97350
+   macro avg       0.45      0.45      0.44     97350
+weighted avg       0.45      0.45      0.44     97350
+
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d3_20250525_080734.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d3_20250525_080735.png
+
+Top feature importances:
+az_rms: 0.4447
+gy_var: 0.1412
+gx_var: 0.1382
+az_mean: 0.1320
+ax_mean: 0.1064
+g_max: 0.0375
+a_entropy: 0.0000
+g_entropy: 0.0000
+g_kurt: 0.0000
+g_skewn: 0.0000
+a_fft: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+a_skewn: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.46
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.45
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=3): 0.44
+
+Mean Accuracy across 5 folds: 0.4453
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.43      0.53      0.47     29250
+         low       0.47      0.35      0.40     31500
+      medium       0.44      0.46      0.45     36600
+
+    accuracy                           0.45     97350
+   macro avg       0.45      0.45      0.44     97350
+weighted avg       0.45      0.45      0.44     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.49
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d5_20250525_080747.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d5_20250525_080749.png
+
+Top feature importances:
+az_rms: 0.2078
+ay_mean: 0.1138
+gz_rms: 0.0977
+az_mean: 0.0904
+ax_mean: 0.0808
+gx_var: 0.0753
+gy_var: 0.0660
+a_max: 0.0568
+ax_rms: 0.0558
+gx_mean: 0.0501
+a_skewn: 0.0292
+gy_mean: 0.0230
+az_var: 0.0200
+g_max: 0.0175
+g_skewn: 0.0084
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.49
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.50
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.48
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.48
+
+Mean Accuracy across 5 folds: 0.4876
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.48      0.56      0.52     29250
+         low       0.47      0.47      0.47     31500
+      medium       0.51      0.45      0.48     36600
+
+    accuracy                           0.49     97350
+   macro avg       0.49      0.49      0.49     97350
+weighted avg       0.49      0.49      0.49     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.49
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d5_20250525_080806.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d5_20250525_080809.png
+
+Top feature importances:
+az_rms: 0.2078
+ay_mean: 0.1138
+gz_rms: 0.0977
+az_mean: 0.0904
+ax_mean: 0.0808
+gx_var: 0.0753
+gy_var: 0.0660
+a_max: 0.0568
+ax_rms: 0.0558
+gx_mean: 0.0501
+a_skewn: 0.0292
+gy_mean: 0.0230
+az_var: 0.0200
+g_max: 0.0175
+g_skewn: 0.0084
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.49
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.50
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.48
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.48
+
+Mean Accuracy across 5 folds: 0.4876
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.48      0.56      0.52     29250
+         low       0.47      0.47      0.47     31500
+      medium       0.51      0.45      0.48     36600
+
+    accuracy                           0.49     97350
+   macro avg       0.49      0.49      0.49     97350
+weighted avg       0.49      0.49      0.49     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.49
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d5_20250525_080826.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d5_20250525_080828.png
+
+Top feature importances:
+az_rms: 0.2078
+ay_mean: 0.1138
+gz_rms: 0.0977
+az_mean: 0.0904
+ax_mean: 0.0808
+gx_var: 0.0753
+gy_var: 0.0660
+a_max: 0.0568
+ax_rms: 0.0558
+gx_mean: 0.0501
+a_skewn: 0.0292
+gy_mean: 0.0230
+az_var: 0.0200
+g_max: 0.0175
+g_skewn: 0.0084
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.49
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.50
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.48
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=5): 0.48
+
+Mean Accuracy across 5 folds: 0.4876
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.48      0.56      0.52     29250
+         low       0.47      0.47      0.47     31500
+      medium       0.51      0.45      0.48     36600
+
+    accuracy                           0.49     97350
+   macro avg       0.49      0.49      0.49     97350
+weighted avg       0.49      0.49      0.49     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.53
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d7_20250525_080847.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d7_20250525_080853.png
+
+Top feature importances:
+az_rms: 0.1354
+az_mean: 0.1063
+ay_mean: 0.0915
+ax_mean: 0.0879
+gz_rms: 0.0753
+a_max: 0.0544
+gx_var: 0.0498
+gy_var: 0.0496
+gx_mean: 0.0485
+az_var: 0.0416
+ax_rms: 0.0352
+gy_mean: 0.0344
+a_skewn: 0.0257
+gz_var: 0.0253
+a_min: 0.0240
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.55
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.55
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.53
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.52
+
+Mean Accuracy across 5 folds: 0.5358
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.52      0.58      0.54     29250
+         low       0.54      0.52      0.53     31500
+      medium       0.55      0.52      0.53     36600
+
+    accuracy                           0.54     97350
+   macro avg       0.54      0.54      0.54     97350
+weighted avg       0.54      0.54      0.54     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.53
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d7_20250525_080917.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d7_20250525_080923.png
+
+Top feature importances:
+az_rms: 0.1354
+az_mean: 0.1064
+ay_mean: 0.0915
+ax_mean: 0.0879
+gz_rms: 0.0732
+a_max: 0.0545
+gy_var: 0.0496
+gx_var: 0.0494
+gx_mean: 0.0485
+az_var: 0.0416
+ax_rms: 0.0358
+gy_mean: 0.0345
+a_skewn: 0.0257
+gz_var: 0.0250
+a_min: 0.0240
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.55
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.55
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.53
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.52
+
+Mean Accuracy across 5 folds: 0.5358
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.52      0.58      0.54     29250
+         low       0.54      0.52      0.53     31500
+      medium       0.55      0.52      0.53     36600
+
+    accuracy                           0.54     97350
+   macro avg       0.54      0.54      0.54     97350
+weighted avg       0.54      0.54      0.54     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.53
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d7_20250525_080947.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d7_20250525_080953.png
+
+Top feature importances:
+az_rms: 0.1355
+az_mean: 0.1064
+ay_mean: 0.0916
+ax_mean: 0.0880
+gz_rms: 0.0732
+a_max: 0.0541
+gy_var: 0.0496
+gx_var: 0.0494
+gx_mean: 0.0485
+az_var: 0.0416
+ax_rms: 0.0358
+gy_mean: 0.0345
+a_skewn: 0.0258
+gz_var: 0.0250
+a_min: 0.0240
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.55
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.55
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.53
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=7): 0.52
+
+Mean Accuracy across 5 folds: 0.5357
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.52      0.58      0.54     29250
+         low       0.54      0.52      0.53     31500
+      medium       0.55      0.52      0.53     36600
+
+    accuracy                           0.54     97350
+   macro avg       0.54      0.54      0.54     97350
+weighted avg       0.54      0.54      0.54     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.61
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d10_20250525_081021.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d10_20250525_081050.png
+
+Top feature importances:
+ay_mean: 0.0921
+az_mean: 0.0850
+az_rms: 0.0817
+ax_mean: 0.0670
+gy_var: 0.0661
+gx_mean: 0.0523
+az_var: 0.0463
+gz_rms: 0.0458
+gy_mean: 0.0417
+gx_var: 0.0408
+a_max: 0.0394
+ax_rms: 0.0364
+g_max: 0.0356
+gz_var: 0.0306
+a_skewn: 0.0283
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.62
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.63
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.62
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.60
+
+Mean Accuracy across 5 folds: 0.6144
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.59      0.62      0.61     29250
+         low       0.62      0.60      0.61     31500
+      medium       0.63      0.62      0.62     36600
+
+    accuracy                           0.61     97350
+   macro avg       0.61      0.61      0.61     97350
+weighted avg       0.62      0.61      0.61     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.61
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d10_20250525_081124.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d10_20250525_081152.png
+
+Top feature importances:
+ay_mean: 0.0924
+az_mean: 0.0851
+az_rms: 0.0820
+ax_mean: 0.0666
+gy_var: 0.0664
+gx_mean: 0.0525
+az_var: 0.0465
+gz_rms: 0.0460
+gy_mean: 0.0414
+gx_var: 0.0397
+a_max: 0.0394
+ax_rms: 0.0367
+g_max: 0.0360
+a_skewn: 0.0291
+gz_var: 0.0291
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.62
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.63
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.62
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.60
+
+Mean Accuracy across 5 folds: 0.6141
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.59      0.62      0.60     29250
+         low       0.62      0.60      0.61     31500
+      medium       0.63      0.62      0.62     36600
+
+    accuracy                           0.61     97350
+   macro avg       0.61      0.61      0.61     97350
+weighted avg       0.61      0.61      0.61     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.61
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_d10_20250525_081226.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_d10_20250525_081253.png
+
+Top feature importances:
+ay_mean: 0.0931
+az_mean: 0.0853
+az_rms: 0.0821
+ax_mean: 0.0676
+gy_var: 0.0666
+gx_mean: 0.0526
+az_var: 0.0466
+gz_rms: 0.0459
+gy_mean: 0.0407
+gx_var: 0.0398
+a_max: 0.0393
+ax_rms: 0.0367
+g_max: 0.0362
+gz_var: 0.0303
+a_skewn: 0.0291
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.62
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.63
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.62
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=10): 0.60
+
+Mean Accuracy across 5 folds: 0.6142
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.59      0.62      0.60     29250
+         low       0.62      0.60      0.61     31500
+      medium       0.63      0.62      0.62     36600
+
+    accuracy                           0.61     97350
+   macro avg       0.61      0.61      0.61     97350
+weighted avg       0.61      0.61      0.61     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.72
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_dNone_20250525_081430.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_dNone_20250525_081905.png
+
+Top feature importances:
+ay_mean: 0.0620
+az_mean: 0.0530
+gx_mean: 0.0515
+ax_mean: 0.0459
+az_rms: 0.0457
+gy_var: 0.0437
+gy_mean: 0.0432
+az_var: 0.0408
+gx_var: 0.0329
+g_max: 0.0329
+a_min: 0.0328
+ay_var: 0.0303
+gz_rms: 0.0302
+a_max: 0.0292
+gz_var: 0.0288
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.71
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.72
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.72
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.71
+
+Mean Accuracy across 5 folds: 0.7138
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.70      0.70      0.70     29250
+         low       0.72      0.72      0.72     31500
+      medium       0.73      0.72      0.72     36600
+
+    accuracy                           0.71     97350
+   macro avg       0.71      0.71      0.71     97350
+weighted avg       0.71      0.71      0.71     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.72
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_dNone_20250525_082049.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_dNone_20250525_082454.png
+
+Top feature importances:
+ay_mean: 0.0631
+az_mean: 0.0529
+gx_mean: 0.0517
+ax_mean: 0.0474
+az_rms: 0.0471
+gy_mean: 0.0439
+gy_var: 0.0431
+az_var: 0.0410
+gx_var: 0.0336
+g_max: 0.0330
+a_min: 0.0325
+gz_rms: 0.0317
+ay_var: 0.0308
+a_max: 0.0300
+a_skewn: 0.0278
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.71
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.72
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.72
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.71
+
+Mean Accuracy across 5 folds: 0.7150
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.69      0.71      0.70     29250
+         low       0.72      0.72      0.72     31500
+      medium       0.73      0.72      0.73     36600
+
+    accuracy                           0.71     97350
+   macro avg       0.71      0.71      0.71     97350
+weighted avg       0.72      0.71      0.72     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.72
+Visualization saved to tree_visualizations/DT_weight_f1_log_loss_dNone_20250525_082629.png
+Feature importance plot saved to feature_importance/importance_weight_log_loss_dNone_20250525_082953.png
+
+Top feature importances:
+ay_mean: 0.0652
+az_mean: 0.0558
+gx_mean: 0.0539
+ax_mean: 0.0487
+az_rms: 0.0479
+gy_var: 0.0461
+gy_mean: 0.0444
+az_var: 0.0416
+gx_var: 0.0346
+g_max: 0.0333
+a_min: 0.0322
+ay_var: 0.0307
+gz_rms: 0.0304
+a_max: 0.0294
+gz_var: 0.0292
+
+--- Fold 2/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.70
+
+--- Fold 3/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.71
+
+--- Fold 4/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.71
+
+--- Fold 5/5 ---
+Decision Tree for weight classification (criterion=log_loss, max_depth=None): 0.71
+
+Mean Accuracy across 5 folds: 0.7105
+
+Classification Report for weight:
+              precision    recall  f1-score   support
+
+        high       0.68      0.71      0.69     29250
+         low       0.71      0.71      0.71     31500
+      medium       0.73      0.71      0.72     36600
+
+    accuracy                           0.71     97350
+   macro avg       0.71      0.71      0.71     97350
+weighted avg       0.71      0.71      0.71     97350
+
+
+************************************************************
+BEST PARAMETERS FOR WEIGHT:
+Criterion: log_loss
+Max Depth: None
+Min Samples Split: 5
+Best Mean Accuracy: 0.7150
+************************************************************
+
+============================================================
+TUNING FOR TARGET: AGE
+============================================================
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d3_20250525_083032.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d3_20250525_083033.png
+
+Top feature importances:
+ay_mean: 0.5478
+gx_var: 0.1906
+gz_var: 0.0798
+az_var: 0.0733
+a_entropy: 0.0613
+g_kurt: 0.0474
+g_entropy: 0.0000
+g_skewn: 0.0000
+a_skewn: 0.0000
+a_kurt: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+g_max: 0.0000
+a_min: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.56
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.56
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+
+Mean Accuracy across 5 folds: 0.5720
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.00      0.00      0.00     18150
+         low       0.57      0.27      0.37     26900
+      medium       0.57      0.93      0.71     52300
+
+    accuracy                           0.57     97350
+   macro avg       0.38      0.40      0.36     97350
+weighted avg       0.47      0.57      0.48     97350
+
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d3_20250525_083045.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d3_20250525_083046.png
+
+Top feature importances:
+ay_mean: 0.5478
+gx_var: 0.1906
+gz_var: 0.0798
+az_var: 0.0733
+a_entropy: 0.0613
+g_kurt: 0.0474
+g_entropy: 0.0000
+g_skewn: 0.0000
+a_skewn: 0.0000
+a_kurt: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+g_max: 0.0000
+a_min: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.56
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.56
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+
+Mean Accuracy across 5 folds: 0.5720
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.00      0.00      0.00     18150
+         low       0.57      0.27      0.37     26900
+      medium       0.57      0.93      0.71     52300
+
+    accuracy                           0.57     97350
+   macro avg       0.38      0.40      0.36     97350
+weighted avg       0.47      0.57      0.48     97350
+
+
+Testing: criterion=log_loss, max_depth=3, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d3_20250525_083057.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d3_20250525_083058.png
+
+Top feature importances:
+ay_mean: 0.5478
+gx_var: 0.1906
+gz_var: 0.0798
+az_var: 0.0733
+a_entropy: 0.0613
+g_kurt: 0.0474
+g_entropy: 0.0000
+g_skewn: 0.0000
+a_skewn: 0.0000
+a_kurt: 0.0000
+g_min: 0.0000
+g_mean: 0.0000
+g_max: 0.0000
+a_min: 0.0000
+g_psdx: 0.0000
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.56
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.56
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=3): 0.58
+
+Mean Accuracy across 5 folds: 0.5720
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.00      0.00      0.00     18150
+         low       0.57      0.27      0.37     26900
+      medium       0.57      0.93      0.71     52300
+
+    accuracy                           0.57     97350
+   macro avg       0.38      0.40      0.36     97350
+weighted avg       0.47      0.57      0.48     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.62
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d5_20250525_083111.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d5_20250525_083114.png
+
+Top feature importances:
+ay_mean: 0.3058
+gx_var: 0.1064
+az_mean: 0.0899
+g_mean: 0.0731
+az_var: 0.0671
+gy_mean: 0.0540
+gx_mean: 0.0519
+gz_var: 0.0445
+gy_var: 0.0426
+a_entropy: 0.0342
+g_kurt: 0.0264
+g_entropy: 0.0202
+a_min: 0.0191
+ax_mean: 0.0191
+ax_var: 0.0174
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.62
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+Mean Accuracy across 5 folds: 0.6145
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.52      0.27      0.35     18150
+         low       0.63      0.41      0.50     26900
+      medium       0.62      0.84      0.71     52300
+
+    accuracy                           0.61     97350
+   macro avg       0.59      0.51      0.52     97350
+weighted avg       0.61      0.61      0.59     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.62
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d5_20250525_083130.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d5_20250525_083133.png
+
+Top feature importances:
+ay_mean: 0.3058
+gx_var: 0.1064
+az_mean: 0.0899
+g_mean: 0.0731
+az_var: 0.0671
+gy_mean: 0.0540
+gx_mean: 0.0519
+gz_var: 0.0445
+gy_var: 0.0426
+a_entropy: 0.0342
+g_kurt: 0.0264
+g_entropy: 0.0202
+a_min: 0.0191
+ax_mean: 0.0191
+ax_var: 0.0174
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.62
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+Mean Accuracy across 5 folds: 0.6145
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.52      0.27      0.35     18150
+         low       0.63      0.41      0.50     26900
+      medium       0.62      0.84      0.71     52300
+
+    accuracy                           0.61     97350
+   macro avg       0.59      0.51      0.52     97350
+weighted avg       0.61      0.61      0.59     97350
+
+
+Testing: criterion=log_loss, max_depth=5, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.62
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d5_20250525_083150.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d5_20250525_083152.png
+
+Top feature importances:
+ay_mean: 0.3058
+gx_var: 0.1064
+az_mean: 0.0899
+g_mean: 0.0731
+az_var: 0.0671
+gy_mean: 0.0540
+gx_mean: 0.0519
+gz_var: 0.0445
+gy_var: 0.0426
+a_entropy: 0.0342
+g_kurt: 0.0264
+g_entropy: 0.0202
+a_min: 0.0191
+ax_mean: 0.0191
+ax_var: 0.0174
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.62
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=5): 0.61
+
+Mean Accuracy across 5 folds: 0.6145
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.52      0.27      0.35     18150
+         low       0.63      0.41      0.50     26900
+      medium       0.62      0.84      0.71     52300
+
+    accuracy                           0.61     97350
+   macro avg       0.59      0.51      0.52     97350
+weighted avg       0.61      0.61      0.59     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d7_20250525_083211.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d7_20250525_083218.png
+
+Top feature importances:
+ay_mean: 0.2133
+gx_var: 0.0913
+gx_mean: 0.0802
+az_var: 0.0737
+az_mean: 0.0657
+g_mean: 0.0544
+ax_mean: 0.0503
+gz_var: 0.0437
+gy_mean: 0.0389
+gy_var: 0.0372
+g_entropy: 0.0366
+a_entropy: 0.0365
+g_max: 0.0337
+a_min: 0.0269
+g_kurt: 0.0225
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.65
+
+Mean Accuracy across 5 folds: 0.6595
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.61      0.43      0.50     18150
+         low       0.62      0.62      0.62     26900
+      medium       0.69      0.76      0.72     52300
+
+    accuracy                           0.66     97350
+   macro avg       0.64      0.60      0.62     97350
+weighted avg       0.66      0.66      0.65     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d7_20250525_083242.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d7_20250525_083249.png
+
+Top feature importances:
+ay_mean: 0.2133
+gx_var: 0.0913
+gx_mean: 0.0802
+az_var: 0.0737
+az_mean: 0.0657
+g_mean: 0.0544
+ax_mean: 0.0503
+gz_var: 0.0437
+gy_mean: 0.0389
+gy_var: 0.0372
+g_entropy: 0.0366
+a_entropy: 0.0365
+g_max: 0.0337
+a_min: 0.0269
+g_kurt: 0.0225
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.65
+
+Mean Accuracy across 5 folds: 0.6595
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.61      0.43      0.50     18150
+         low       0.62      0.62      0.62     26900
+      medium       0.69      0.76      0.72     52300
+
+    accuracy                           0.66     97350
+   macro avg       0.64      0.60      0.62     97350
+weighted avg       0.66      0.66      0.65     97350
+
+
+Testing: criterion=log_loss, max_depth=7, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d7_20250525_083313.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d7_20250525_083320.png
+
+Top feature importances:
+ay_mean: 0.2133
+gx_var: 0.0913
+gx_mean: 0.0802
+az_var: 0.0738
+az_mean: 0.0657
+g_mean: 0.0544
+ax_mean: 0.0503
+gz_var: 0.0437
+gy_mean: 0.0389
+gy_var: 0.0372
+g_entropy: 0.0366
+a_entropy: 0.0365
+g_max: 0.0337
+a_min: 0.0269
+g_kurt: 0.0225
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.66
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=7): 0.65
+
+Mean Accuracy across 5 folds: 0.6595
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.61      0.43      0.50     18150
+         low       0.62      0.62      0.62     26900
+      medium       0.69      0.76      0.72     52300
+
+    accuracy                           0.66     97350
+   macro avg       0.64      0.60      0.62     97350
+weighted avg       0.66      0.66      0.65     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d10_20250525_083350.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d10_20250525_083425.png
+
+Top feature importances:
+ay_mean: 0.1527
+gx_mean: 0.0768
+az_mean: 0.0697
+gx_var: 0.0683
+az_var: 0.0647
+gy_mean: 0.0519
+ax_mean: 0.0496
+g_mean: 0.0431
+gy_var: 0.0377
+a_min: 0.0371
+a_entropy: 0.0367
+gz_var: 0.0365
+g_max: 0.0314
+g_entropy: 0.0306
+gz_mean: 0.0230
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.73
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.71
+
+Mean Accuracy across 5 folds: 0.7196
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.68      0.54      0.60     18150
+         low       0.70      0.68      0.69     26900
+      medium       0.74      0.80      0.77     52300
+
+    accuracy                           0.72     97350
+   macro avg       0.71      0.67      0.69     97350
+weighted avg       0.72      0.72      0.72     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d10_20250525_083501.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d10_20250525_083537.png
+
+Top feature importances:
+ay_mean: 0.1530
+gx_mean: 0.0767
+az_mean: 0.0699
+gx_var: 0.0682
+az_var: 0.0651
+gy_mean: 0.0522
+ax_mean: 0.0494
+g_mean: 0.0433
+g_entropy: 0.0386
+gy_var: 0.0380
+a_min: 0.0371
+gz_var: 0.0369
+g_max: 0.0314
+a_entropy: 0.0284
+gz_mean: 0.0228
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.73
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.71
+
+Mean Accuracy across 5 folds: 0.7197
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.68      0.54      0.60     18150
+         low       0.70      0.68      0.69     26900
+      medium       0.74      0.80      0.77     52300
+
+    accuracy                           0.72     97350
+   macro avg       0.71      0.67      0.69     97350
+weighted avg       0.72      0.72      0.72     97350
+
+
+Testing: criterion=log_loss, max_depth=10, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_d10_20250525_083614.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_d10_20250525_083650.png
+
+Top feature importances:
+ay_mean: 0.1541
+gx_mean: 0.0771
+az_mean: 0.0698
+gx_var: 0.0683
+az_var: 0.0669
+gy_mean: 0.0523
+ax_mean: 0.0497
+g_mean: 0.0435
+g_entropy: 0.0386
+gy_var: 0.0376
+a_min: 0.0368
+gz_var: 0.0366
+g_max: 0.0308
+a_entropy: 0.0284
+gz_mean: 0.0226
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.72
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.73
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=10): 0.71
+
+Mean Accuracy across 5 folds: 0.7194
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.68      0.54      0.60     18150
+         low       0.69      0.68      0.69     26900
+      medium       0.74      0.80      0.77     52300
+
+    accuracy                           0.72     97350
+   macro avg       0.71      0.67      0.69     97350
+weighted avg       0.72      0.72      0.72     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=2
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.77
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_dNone_20250525_083823.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_dNone_20250525_084214.png
+
+Top feature importances:
+ay_mean: 0.0936
+az_mean: 0.0606
+gx_mean: 0.0577
+az_var: 0.0509
+gy_mean: 0.0493
+gx_var: 0.0482
+ax_mean: 0.0415
+g_mean: 0.0379
+a_min: 0.0360
+gy_var: 0.0342
+g_max: 0.0328
+gz_var: 0.0325
+gz_mean: 0.0296
+a_entropy: 0.0287
+ay_var: 0.0285
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.76
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.77
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.77
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.76
+
+Mean Accuracy across 5 folds: 0.7663
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.67      0.67      0.67     18150
+         low       0.75      0.75      0.75     26900
+      medium       0.81      0.81      0.81     52300
+
+    accuracy                           0.77     97350
+   macro avg       0.74      0.74      0.74     97350
+weighted avg       0.77      0.77      0.77     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=5
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.77
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_dNone_20250525_084346.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_dNone_20250525_084716.png
+
+Top feature importances:
+ay_mean: 0.0950
+az_mean: 0.0614
+gx_mean: 0.0589
+az_var: 0.0511
+gy_mean: 0.0488
+gx_var: 0.0482
+ax_mean: 0.0420
+g_mean: 0.0379
+a_min: 0.0356
+gy_var: 0.0333
+g_max: 0.0325
+gz_var: 0.0321
+gz_mean: 0.0301
+ay_var: 0.0293
+a_entropy: 0.0272
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.76
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.76
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.77
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.76
+
+Mean Accuracy across 5 folds: 0.7640
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.66      0.68      0.67     18150
+         low       0.75      0.75      0.75     26900
+      medium       0.81      0.80      0.80     52300
+
+    accuracy                           0.76     97350
+   macro avg       0.74      0.74      0.74     97350
+weighted avg       0.76      0.76      0.76     97350
+
+
+Testing: criterion=log_loss, max_depth=None, min_samples_split=10
+--------------------------------------------------------------------------------
+
+--- Fold 1/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.77
+Visualization saved to tree_visualizations/DT_age_f1_log_loss_dNone_20250525_084838.png
+Feature importance plot saved to feature_importance/importance_age_log_loss_dNone_20250525_085133.png
+
+Top feature importances:
+ay_mean: 0.0981
+az_mean: 0.0621
+gx_mean: 0.0594
+az_var: 0.0526
+gy_mean: 0.0504
+gx_var: 0.0499
+ax_mean: 0.0431
+g_mean: 0.0381
+a_min: 0.0362
+gy_var: 0.0345
+gz_var: 0.0334
+g_max: 0.0324
+gz_mean: 0.0295
+ay_var: 0.0289
+g_entropy: 0.0281
+
+--- Fold 2/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.76
+
+--- Fold 3/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.76
+
+--- Fold 4/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.77
+
+--- Fold 5/5 ---
+Decision Tree for age classification (criterion=log_loss, max_depth=None): 0.76
+
+Mean Accuracy across 5 folds: 0.7628
+
+Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.66      0.68      0.67     18150
+         low       0.75      0.75      0.75     26900
+      medium       0.81      0.80      0.80     52300
+
+    accuracy                           0.76     97350
+   macro avg       0.74      0.74      0.74     97350
+weighted avg       0.76      0.76      0.76     97350
+
+
+************************************************************
+BEST PARAMETERS FOR AGE:
+Criterion: log_loss
+Max Depth: None
+Min Samples Split: 2
+Best Mean Accuracy: 0.7663
+************************************************************
+
+================================================================================
+SUMMARY OF BEST RESULTS
+================================================================================
+
+Target: HEIGHT
+----------------------------------------
+Best Accuracy: 0.7464
+Criterion: log_loss
+Max Depth: None
+Min Samples Split: 2
+
+Target: AGE
+----------------------------------------
+Best Accuracy: 0.7663
+Criterion: log_loss
+Max Depth: None
+Min Samples Split: 2
+
+Target: WEIGHT
+----------------------------------------
+Best Accuracy: 0.7150
+Criterion: log_loss
+Max Depth: None
+Min Samples Split: 5

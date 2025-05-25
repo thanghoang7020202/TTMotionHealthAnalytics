@@ -1,0 +1,183 @@
+=== Cross-validation for age classification ===
+
+--- Fold 1/5 ---
+Random Forest for age classification accuracy: 0.8705
+Feature importance plot saved to rf_feature_importance/importance_age_fold_1_20250525_184925.png
+
+Top feature importances:
+ay_mean: 0.0569
+az_mean: 0.0480
+gy_mean: 0.0442
+az_rms: 0.0417
+gx_mean: 0.0414
+ax_mean: 0.0411
+az_var: 0.0383
+ay_rms: 0.0364
+gx_var: 0.0353
+gx_rms: 0.0344
+Confusion matrix saved to rf_confusion_matrices/cm_age_fold_1_20250525_184925.png
+Sample tree visualization saved to rf_tree_samples/tree_age_sample_0_20250525_184926.png
+Model saved to rf_models/rf_age_fold_1.joblib
+
+--- Fold 2/5 ---
+Random Forest for age classification accuracy: 0.8691
+Feature importance plot saved to rf_feature_importance/importance_age_fold_2_20250525_184945.png
+
+Top feature importances:
+ay_mean: 0.0579
+az_mean: 0.0483
+gy_mean: 0.0434
+ax_mean: 0.0419
+az_rms: 0.0416
+gx_mean: 0.0411
+az_var: 0.0388
+ay_rms: 0.0367
+gx_var: 0.0351
+gx_rms: 0.0332
+Confusion matrix saved to rf_confusion_matrices/cm_age_fold_2_20250525_184946.png
+Model saved to rf_models/rf_age_fold_2.joblib
+
+--- Fold 3/5 ---
+Random Forest for age classification accuracy: 0.8714
+Feature importance plot saved to rf_feature_importance/importance_age_fold_3_20250525_185001.png
+
+Top feature importances:
+ay_mean: 0.0567
+az_mean: 0.0482
+gy_mean: 0.0429
+az_rms: 0.0419
+gx_mean: 0.0413
+ax_mean: 0.0408
+az_var: 0.0383
+gx_var: 0.0368
+ay_rms: 0.0360
+gz_rms: 0.0339
+Confusion matrix saved to rf_confusion_matrices/cm_age_fold_3_20250525_185002.png
+Model saved to rf_models/rf_age_fold_3.joblib
+
+--- Fold 4/5 ---
+Random Forest for age classification accuracy: 0.8709
+Feature importance plot saved to rf_feature_importance/importance_age_fold_4_20250525_185018.png
+
+Top feature importances:
+ay_mean: 0.0576
+az_mean: 0.0496
+gy_mean: 0.0440
+ax_mean: 0.0411
+az_rms: 0.0404
+gx_mean: 0.0402
+az_var: 0.0385
+gx_var: 0.0371
+ay_rms: 0.0360
+gz_rms: 0.0330
+Confusion matrix saved to rf_confusion_matrices/cm_age_fold_4_20250525_185018.png
+Model saved to rf_models/rf_age_fold_4.joblib
+
+--- Fold 5/5 ---
+Random Forest for age classification accuracy: 0.8682
+Feature importance plot saved to rf_feature_importance/importance_age_fold_5_20250525_185034.png
+
+Top feature importances:
+ay_mean: 0.0588
+az_mean: 0.0476
+gy_mean: 0.0445
+az_rms: 0.0411
+ax_mean: 0.0406
+gx_mean: 0.0404
+az_var: 0.0384
+ay_rms: 0.0371
+gx_var: 0.0355
+gz_rms: 0.0333
+Confusion matrix saved to rf_confusion_matrices/cm_age_fold_5_20250525_185034.png
+Model saved to rf_models/rf_age_fold_5.joblib
+
+Mean Accuracy across 5 folds: 0.8700
+
+Overall Classification Report for age:
+              precision    recall  f1-score   support
+
+        high       0.88      0.72      0.80     18150
+         low       0.90      0.85      0.87     26900
+      medium       0.85      0.93      0.89     52300
+
+    accuracy                           0.87     97350
+   macro avg       0.88      0.84      0.85     97350
+weighted avg       0.87      0.87      0.87     97350
+
+Confusion matrix saved to rf_confusion_matrices/cm_age_20250525_185036.png
+
+=== Feature Group Importance Analysis for age ===
+
+--- Testing feature group: acceleration_means ---
+Fold 1: Accuracy = 0.6275
+Fold 2: Accuracy = 0.6305
+Fold 3: Accuracy = 0.6287
+Fold 4: Accuracy = 0.6255
+Fold 5: Accuracy = 0.6256
+Average accuracy with acceleration_means: 0.6276
+
+--- Testing feature group: gyroscope_means ---
+Fold 1: Accuracy = 0.5726
+Fold 2: Accuracy = 0.5674
+Fold 3: Accuracy = 0.5633
+Fold 4: Accuracy = 0.5702
+Fold 5: Accuracy = 0.5676
+Average accuracy with gyroscope_means: 0.5682
+
+--- Testing feature group: acceleration_variance ---
+Fold 1: Accuracy = 0.5355
+Fold 2: Accuracy = 0.5308
+Fold 3: Accuracy = 0.5407
+Fold 4: Accuracy = 0.5381
+Fold 5: Accuracy = 0.5351
+Average accuracy with acceleration_variance: 0.5360
+
+--- Testing feature group: gyroscope_variance ---
+Fold 1: Accuracy = 0.5689
+Fold 2: Accuracy = 0.5637
+Fold 3: Accuracy = 0.5626
+Fold 4: Accuracy = 0.5610
+Fold 5: Accuracy = 0.5627
+Average accuracy with gyroscope_variance: 0.5638
+
+--- Testing feature group: acceleration_rms ---
+Fold 1: Accuracy = 0.5627
+Fold 2: Accuracy = 0.5655
+Fold 3: Accuracy = 0.5706
+Fold 4: Accuracy = 0.5618
+Fold 5: Accuracy = 0.5649
+Average accuracy with acceleration_rms: 0.5651
+
+--- Testing feature group: gyroscope_rms ---
+Fold 1: Accuracy = 0.5543
+Fold 2: Accuracy = 0.5613
+Fold 3: Accuracy = 0.5566
+Fold 4: Accuracy = 0.5523
+Fold 5: Accuracy = 0.5570
+Average accuracy with gyroscope_rms: 0.5563
+
+--- Testing feature group: aggregate_stats ---
+Fold 1: Accuracy = 0.6287
+Fold 2: Accuracy = 0.6277
+Fold 3: Accuracy = 0.6291
+Fold 4: Accuracy = 0.6272
+Fold 5: Accuracy = 0.6331
+Average accuracy with aggregate_stats: 0.6292
+
+--- Testing feature group: frequency_domain ---
+Fold 1: Accuracy = 0.5202
+Fold 2: Accuracy = 0.5247
+Fold 3: Accuracy = 0.5249
+Fold 4: Accuracy = 0.5235
+Fold 5: Accuracy = 0.5224
+Average accuracy with frequency_domain: 0.5231
+
+--- Testing feature group: distribution_stats ---
+Fold 1: Accuracy = 0.5373
+Fold 2: Accuracy = 0.5409
+Fold 3: Accuracy = 0.5402
+Fold 4: Accuracy = 0.5370
+Fold 5: Accuracy = 0.5447
+Average accuracy with distribution_stats: 0.5400
+
+Feature group importance plot saved to rf_feature_groups/group_importance_age_20250525_185346.png
